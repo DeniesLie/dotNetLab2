@@ -1,0 +1,12 @@
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/bin/Debug/net6.0/Data.deps.json
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/bin/Debug/net6.0/Data.dll
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/bin/Debug/net6.0/ref/Data.dll
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/bin/Debug/net6.0/Data.pdb
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/obj/Debug/net6.0/Data.csproj.AssemblyReference.cache
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/obj/Debug/net6.0/Data.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/obj/Debug/net6.0/Data.AssemblyInfoInputs.cache
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/obj/Debug/net6.0/Data.AssemblyInfo.cs
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/obj/Debug/net6.0/Data.csproj.CoreCompileInputs.cache
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/obj/Debug/net6.0/Data.dll
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/obj/Debug/net6.0/ref/Data.dll
+/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/Data/obj/Debug/net6.0/Data.pdb

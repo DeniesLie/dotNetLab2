@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item Id="1" Name="iPhone 10">
+    <PricePerUnit>499.99</PricePerUnit>
+    <Amount>25</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>5/23/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>2/26/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/3/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/14/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="3" Name="Apple" />
+    <ItemCategories>
+      <ItemCategory Name="smartphone" />
+    </ItemCategories>
+  </Item>
+  <Item Id="2" Name="Macbook Pro 16 (2021)">
+    <PricePerUnit>1199.99</PricePerUnit>
+    <Amount>12</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/15/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/1/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/16/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>4/3/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="3" Name="Apple" />
+    <ItemCategories>
+      <ItemCategory Name="laptop" />
+    </ItemCategories>
+  </Item>
+  <Item Id="3" Name="Samsung Galaxy S22 Ultra">
+    <PricePerUnit>35.99</PricePerUnit>
+    <Amount>11</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/5/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>2/20/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/4/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/23/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>4/4/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="1" Name="Samsung" />
+    <ItemCategories>
+      <ItemCategory Name="smartphone" />
+    </ItemCategories>
+  </Item>
+  <Item Id="4" Name="AirPods Pro">
+    <PricePerUnit>149.99</PricePerUnit>
+    <Amount>16</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/5/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/8/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>4/7/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="3" Name="Apple" />
+    <ItemCategories>
+      <ItemCategory Name="headset" />
+      <ItemCategory Name="wireless" />
+    </ItemCategories>
+  </Item>
+  <Item Id="5" Name="Dell Latitude 16">
+    <PricePerUnit>89.99</PricePerUnit>
+    <Amount>3</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/7/2020 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>2/28/2020 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="2" Name="DELL" />
+    <ItemCategories>
+      <ItemCategory Name="laptop" />
+    </ItemCategories>
+  </Item>
+  <Item Id="6" Name="Xiaomi Mi Dual Mode Wireless Mouse">
+    <PricePerUnit>19.99</PricePerUnit>
+    <Amount>67</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/9/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>2/25/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/4/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/20/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>4/17/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="4" Name="Xiaomi" />
+    <ItemCategories>
+      <ItemCategory Name="computer mouse" />
+      <ItemCategory Name="wireless" />
+      <ItemCategory Name="accessory" />
+    </ItemCategories>
+  </Item>
+  <Item Id="7" Name="Xiaomi Mi Wireless Charger 10W">
+    <PricePerUnit>24.99</PricePerUnit>
+    <Amount>10</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/15/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/1/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/22/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>4/5/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="4" Name="Xiaomi" />
+    <ItemCategories>
+      <ItemCategory Name="wireless" />
+      <ItemCategory Name="accessory" />
+      <ItemCategory Name="charger" />
+    </ItemCategories>
+  </Item>
+  <Item Id="8" Name="Huawei SuperCharger 40W">
+    <PricePerUnit>21.99</PricePerUnit>
+    <Amount>18</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/9/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>2/23/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/6/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="5" Name="Huawei" />
+    <ItemCategories>
+      <ItemCategory Name="accessory" />
+      <ItemCategory Name="charger" />
+    </ItemCategories>
+  </Item>
+  <Item Id="9" Name="iPhone 13 Pro Phone Case Blue Fog">
+    <PricePerUnit>9.99</PricePerUnit>
+    <Amount>30</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/20/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>4/22/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="3" Name="Apple" />
+    <ItemCategories>
+      <ItemCategory Name="accessory" />
+      <ItemCategory Name="phone case" />
+    </ItemCategories>
+  </Item>
+  <Item Id="10" Name="Dell Inspiron 16 (2021)">
+    <PricePerUnit>159.99</PricePerUnit>
+    <Amount>57</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/9/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>2/28/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/4/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/30/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>4/15/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="2" Name="DELL" />
+    <ItemCategories>
+      <ItemCategory Name="laptop" />
+    </ItemCategories>
+  </Item>
+  <Item Id="11" Name="Xiaomi Mi Notebook Air 12,5">
+    <PricePerUnit>109.99</PricePerUnit>
+    <Amount>57</Amount>
+    <SupplyDateTimes>
+      <SupplyDateTime>2/9/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>2/28/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/4/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>3/30/2022 12:00:00 PM +00:00</SupplyDateTime>
+      <SupplyDateTime>4/15/2022 12:00:00 PM +00:00</SupplyDateTime>
+    </SupplyDateTimes>
+    <Manufacturer Id="4" Name="Xiaomi" />
+    <ItemCategories>
+      <ItemCategory Name="laptop" />
+    </ItemCategories>
+  </Item>
+</Items>
