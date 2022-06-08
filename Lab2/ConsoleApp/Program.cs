@@ -6,6 +6,7 @@ using LinqLab1;
 
 var itemRepo = new ItemRepository("/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/ConsoleApp/items.xml");
 var itemService = new ItemService(itemRepo);
+var cr = new ConsoleReader(itemService);
 var storage = new Storage();
 storage.SeedData();
 itemRepo.Create(storage.Items);
@@ -14,18 +15,18 @@ MenuPrinter.Print();
 
 while (true)
 {
-    var optionNum = ConsoleReader.ReadField<int>("Option number", validator => validator.SetMinValue(0).SetMaxValue(16));
+    var optionNum = cr.ReadField<int>("Option number", validator => validator.SetMinValue(0).SetMaxValue(17));
 
     switch (optionNum)
     {
         case 0:
-            var item = ConsoleReader.ReadItem();
+            var item = cr.ReadItem();
             itemService.Add(item);
             break;
         case 1:
-            var itemToUpdateId = ConsoleReader.ReadField<int>("Item id",
+            var itemToUpdateId = cr.ReadField<int>("Item id",
                 v => v.SetMinValue(1));
-            var dateTime = ConsoleReader.ReadField<DateTime>("Supply date time");
+            var dateTime = cr.ReadField<DateTime>("Supply date time");
             itemService.AddSupplyDateTimeToItem(itemToUpdateId, dateTime);
             break;
         case 2:
@@ -33,19 +34,19 @@ while (true)
             itemService.GetAll().Print();
             break;
         case 3:
-            var manufacturerName = ConsoleReader.ReadField<string>("Manufacturer name");
+            var manufacturerName = cr.ReadField<string>("Manufacturer name");
             itemService.GetAllItemsFromManufacturer(manufacturerName).Print();
             break;
         case 4:
-            var itemId = ConsoleReader.ReadField<int>("Item id", v => v.SetMinValue(1));
+            var itemId = cr.ReadField<int>("Item id", v => v.SetMinValue(1));
             itemService.GetCategoriesOfItemById(itemId).Print();
             break;
         case 5:
             itemService.GetAllManufacturers().Print();
             break;
         case 6:
-            var categoryName = ConsoleReader.ReadField<string>("Category");
-            itemService.GetItemsThatContainsCategory(categoryName);
+            var categoryName = cr.ReadField<string>("Category");
+            itemService.GetItemsThatContainsCategory(categoryName).Print();
             break;
         case 7:
             itemService.GetItemsSortedByPrice().Print();
@@ -63,9 +64,9 @@ while (true)
             itemService.GetItemCategoriesSoldByManufacturer().Print();
             break;
         case 12:
-            var fromPrice = ConsoleReader
+            var fromPrice = cr
                 .ReadField<double>("From price", v => v.SetMinValue(0.01));
-            var toPrice = ConsoleReader
+            var toPrice = cr
                 .ReadField<double>("To price", v => v.SetMinValue(0.01));
             itemService.FindLaptopsByPriceRange(fromPrice, toPrice).Print();
             break;

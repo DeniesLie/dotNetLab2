@@ -1,24 +1,48 @@
+using Data;
 using Data.Entities;
 using Lab2.Validators;
+using LinqLab1;
 
 namespace Lab2;
 
-public static class ConsoleReader
+public class ConsoleReader
 {
-
-    public static Item ReadItem()
+    private readonly ItemService _itemService;
+    
+    public ConsoleReader(ItemService itemService)
+    {
+        _itemService = itemService;
+    }
+    
+    public Item ReadItem()
     {
         var item = new Item();
         Console.WriteLine("Enter item info:");
         item.Name = ReadField<string>("Name", validator => validator.SetMinLength(2).SetMaxLength(30));
         item.PricePerUnit = ReadField<double>("Price per unit", validator => validator.SetMinValue(0.01));
         item.Amount = ReadField<uint>("Amount in storage");
+        var firstSupplyDateTime = ReadField<DateTime>("Supply date time");
+        item.SupplyDateTimes.Add(firstSupplyDateTime);
+        Console.WriteLine("Select manufacturer:");
+        var manufacturers = _itemService.GetAllManufacturers();
+        manufacturers.Print();
+        var manufacturerId = ReadField<int>("ManufacturerId:", v => v.SetMinValue(1));
+        item.ManufacturerId = manufacturerId;
+        item.Manufacturer = manufacturers.SingleOrDefault(m => m.Id == manufacturerId);
+        var categoriesCount = ReadField<uint>("Number of item's categories:");
+        for (int i = 0; i < categoriesCount; i++)
+        {
+            var categoryName = ReadField<string>($"Category #{i}", v => v.SetMinLength(2));
+            item.ItemCategories.Add( new ItemCategory(){
+                Name = categoryName
+            });
+        }
         return item;
     }
 
 
-    public static T? ReadField<T>(string fieldName) => ReadField<T>(fieldName, null);
-    public static T? ReadField<T>(string fieldName, Action<Validator<T>>? configureValidator)
+    public  T? ReadField<T>(string fieldName) => ReadField<T>(fieldName, null);
+    public  T? ReadField<T>(string fieldName, Action<Validator<T>>? configureValidator)
     {
         var validator = new Validator<T>();
         if (configureValidator is not null) configureValidator(validator);

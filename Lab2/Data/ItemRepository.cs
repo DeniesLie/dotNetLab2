@@ -189,4 +189,9 @@ public class ItemRepository
         root.AppendChild(itemElement);
         _xmlDoc.Save(_filePath);
     }
+
+    public void SaveToXDoc()
+    {
+        _xDoc.Save(_filePath);
+    }
 }

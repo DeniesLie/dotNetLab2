@@ -117,4 +117,12 @@ public static class QueryPrinter
             }
         }
     }
+
+    public static void Print(this IDictionary<Item, DateTimeOffset> dict)
+    {
+        foreach (var (item, dateTime) in dict)
+        {
+            Console.WriteLine($"\t{item.Name}: {dateTime}");
+        }
+    }
 }

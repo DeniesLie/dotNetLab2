@@ -27,6 +27,7 @@ public class ItemService
         var xItemToUpdate = _itemRepo.Query().Single(i => Int32.Parse(i.Attribute("Id").Value) == itemId);
         xItemToUpdate.Element("SupplyDateTimes")
             .Add(new XElement("SupplyDateTime", dateTimeOffset));
+        _itemRepo.SaveToXDoc();
     }
     
     public IEnumerable<Item> GetAllItemsFromManufacturer(string manufacturerName)
@@ -55,7 +56,8 @@ public class ItemService
     {
         return _itemRepo.Query()
             .Where(i =>
-                i.Element("ItemCategories").Elements("ItemCategory").Select(c => c.Attribute("Name").Value).Contains(categoryName))
+                i.Element("ItemCategories").Elements("ItemCategory").Select(c => c.Attribute("Name").Value)
+                    .Contains(categoryName))
             .Select(xItem => xItem.ToItem());
     }
 
@@ -66,12 +68,14 @@ public class ItemService
             .Select(xItem => xItem.ToItem());
     }
 
-    public IEnumerable<Item> GetItemsSortedByLastSupplyDate()
+    public IDictionary<Item, DateTimeOffset> GetItemsSortedByLastSupplyDate()
     {
         return _itemRepo.Query()
             .OrderByDescending(i =>
                 i.Element("SupplyDateTimes").Elements("SupplyDateTime").Select(dt => DateTimeOffset.Parse(dt.Value)).Max(dt => dt))
-            .Select(xItem => xItem.ToItem());
+            .Select(xItem => xItem.ToItem())
+            .ToDictionary(i => i,
+                i => i.SupplyDateTimes.Max(dt => dt));
     }
     
     // query
