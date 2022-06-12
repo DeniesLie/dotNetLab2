@@ -4,7 +4,7 @@ using Lab2;
 using Lab2.Validators;
 using LinqLab1;
 
-var itemRepo = new ItemRepository("/mnt/8A8633A486339025/Study/DotNet/lab2/Lab2/ConsoleApp/items.xml");
+var itemRepo = new ItemRepository("C:\\Users\\User\\RiderProjects\\dotNetLab2\\Lab2\\ConsoleApp\\items.xml");
 var itemService = new ItemService(itemRepo);
 var cr = new ConsoleReader(itemService);
 var storage = new Storage();
@@ -65,9 +65,10 @@ while (true)
             break;
         case 12:
             var fromPrice = cr
-                .ReadField<double>("From price", v => v.SetMinValue(0.01));
+                .ReadField<decimal>("From price", 
+                      v => v.SetMinValue(0.01m));
             var toPrice = cr
-                .ReadField<double>("To price", v => v.SetMinValue(0.01));
+                .ReadField<decimal>("To price", v => v.SetMinValue(0.01m));
             itemService.FindLaptopsByPriceRange(fromPrice, toPrice).Print();
             break;
         case 13:

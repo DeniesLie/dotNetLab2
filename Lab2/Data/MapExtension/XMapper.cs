@@ -17,7 +17,7 @@ public static class XMapper
         result.Id = Int32.Parse(xElement.Attribute("Id")!.Value);
         result.Name = xElement.Attribute("Name")!.Value;
         result.Amount = UInt32.Parse(xElement.Element("Amount")!.Value);
-        result.PricePerUnit = Double.Parse(xElement.Element("PricePerUnit")!.Value);
+        result.PricePerUnit = Decimal.Parse(xElement.Element("PricePerUnit")!.Value);
         foreach (var xDateTime in xElement.Element("SupplyDateTimes").Elements("SupplyDateTime"))
         {
             result.SupplyDateTimes.Add(DateTimeOffset.Parse(xDateTime.Value));

@@ -36,7 +36,7 @@ public class ItemRepository
                 }
                 if (childNode.Name == "PricePerUnit")
                 {
-                    item.PricePerUnit = Double.Parse(childNode.InnerText);
+                    item.PricePerUnit = Decimal.Parse(childNode.InnerText);
                 }
                 if (childNode.Name == "SupplyDateTimes")
                 {
@@ -63,6 +63,7 @@ public class ItemRepository
                         item.ItemCategories.Add(
                             new ItemCategory()
                             {
+                                Id = Int32.Parse(categoryNode.Attributes.GetNamedItem("Id").Value),
                                 Name = categoryNode.Attributes.GetNamedItem("Name").Value
                             });
                     }
@@ -106,6 +107,7 @@ public class ItemRepository
                 foreach (var category in item.ItemCategories)
                 {
                     writer.WriteStartElement("ItemCategory");
+                    writer.WriteAttributeString("Id", category.Id.ToString());
                     writer.WriteAttributeString("Name", category.Name);
                     writer.WriteEndElement();
                 }
@@ -177,6 +179,10 @@ public class ItemRepository
         foreach (var category in item.ItemCategories)
         {
             var categoryElement = _xmlDoc.CreateElement("ItemCategory");
+            var categoryIdAttr = _xmlDoc.CreateAttribute("Id");
+            XmlText idAttrValue = _xmlDoc.CreateTextNode(category.Id.ToString());
+            categoryIdAttr.AppendChild(idAttrValue);
+            categoryElement.AppendChild(categoryIdAttr);
             var categoryNameAttr = _xmlDoc.CreateAttribute("Name");
             XmlText nameAttrValue = _xmlDoc.CreateTextNode(category.Name);
             categoryNameAttr.AppendChild(nameAttrValue);

@@ -52,14 +52,14 @@ public class Storage
         };
         _itemCategories = new()
         {
-            new(){Name = "laptop"},
-            new() {Name = "smartphone"},
-            new() {Name = "headset"},
-            new() {Name = "computer mouse"},
-            new () {Name = "wireless"},
-            new() {Name = "accessory"},
-            new() {Name = "charger"},
-            new () {Name = "phone case"},
+            new(){Id = 1, Name = "laptop"},
+            new() {Id = 2, Name = "smartphone"},
+            new() {Id = 3, Name = "headset"},
+            new() {Id = 4, Name = "computer mouse"},
+            new () {Id = 5, Name = "wireless"},
+            new() {Id = 6, Name = "accessory"},
+            new() {Id = 7, Name = "charger"},
+            new () {Id = 8, Name = "phone case"},
         };
         
         _items = new()
@@ -68,7 +68,7 @@ public class Storage
             {
                 Id = 1,
                 Name="iPhone 10", 
-                PricePerUnit = 499.99, 
+                PricePerUnit = (decimal) 499.99, 
                 Amount = 25, 
                 ManufacturerId = 3,
                 ItemCategories = _itemCategories.Where(p => p.Name is "smartphone").ToList(),
@@ -84,7 +84,7 @@ public class Storage
             {
                 Id = 2,
                 Name="Macbook Pro 16 (2021)", 
-                PricePerUnit = 1199.99, 
+                PricePerUnit = (decimal) 1199.99, 
                 Amount = 12, 
                 ManufacturerId = 3,
                 ItemCategories = _itemCategories.Where(p => p.Name is "laptop").ToList(),
@@ -100,7 +100,7 @@ public class Storage
             { 
                 Id = 3,
                 Name="Samsung Galaxy S22 Ultra", 
-                PricePerUnit = 35.99, 
+                PricePerUnit = (decimal) 35.99, 
                 Amount = 11, 
                 ManufacturerId = 1,
                 ItemCategories = _itemCategories.Where(p => p.Name == "smartphone").ToList(),
@@ -117,7 +117,7 @@ public class Storage
             {
                 Id = 4,
                 Name="AirPods Pro", 
-                PricePerUnit = 149.99, 
+                PricePerUnit = (decimal) 149.99, 
                 Amount = 16, 
                 ManufacturerId = 3,
                 ItemCategories = _itemCategories.Where(p => p.Name is "headset" or "wireless").ToList(),
@@ -132,7 +132,7 @@ public class Storage
             {
                 Id = 5,
                 Name="Dell Latitude 16", 
-                PricePerUnit = 89.99, 
+                PricePerUnit = (decimal) 89.99, 
                 Amount = 3, 
                 ManufacturerId = 2,
                 ItemCategories = _itemCategories.Where(p => p.Name == "laptop").ToList(),
@@ -146,7 +146,7 @@ public class Storage
             {
                 Id = 6, 
                 Name="Xiaomi Mi Dual Mode Wireless Mouse", 
-                PricePerUnit = 19.99, 
+                PricePerUnit = (decimal) 19.99, 
                 Amount = 67, 
                 ManufacturerId = 4,
                 ItemCategories = _itemCategories.Where(p => p.Name is "computer mouse" or "wireless" or "accessory").ToList(),
@@ -163,7 +163,7 @@ public class Storage
             {
                 Id = 7,
                 Name="Xiaomi Mi Wireless Charger 10W", 
-                PricePerUnit = 24.99, 
+                PricePerUnit = (decimal) 24.99, 
                 Amount = 10, 
                 ManufacturerId = 4,
                 ItemCategories = _itemCategories.Where(p => p.Name is "charger" or "wireless" or "accessory").ToList(),
@@ -179,7 +179,7 @@ public class Storage
             {
                 Id = 8,
                 Name="Huawei SuperCharger 40W", 
-                PricePerUnit = 21.99, 
+                PricePerUnit = (decimal) 21.99, 
                 Amount = 18, 
                 ManufacturerId = 5,
                 ItemCategories = _itemCategories.Where(p => p.Name is "charger" or "accessory").ToList(),
@@ -194,7 +194,7 @@ public class Storage
             {
                 Id = 9,
                 Name="iPhone 13 Pro Phone Case Blue Fog", 
-                PricePerUnit = 9.99,
+                PricePerUnit = (decimal) 9.99,
                 Amount = 30, 
                 ManufacturerId = 3,
                 ItemCategories = _itemCategories.Where(p => p.Name is "phone case" or "accessory").ToList(),
@@ -208,7 +208,7 @@ public class Storage
             {
                 Id = 10,
                 Name="Dell Inspiron 16 (2021)", 
-                PricePerUnit = 159.99, 
+                PricePerUnit = (decimal) 159.99, 
                 Amount = 57, 
                 ManufacturerId = 2,
                 ItemCategories = _itemCategories.Where(p => p.Name == "laptop").ToList(),
@@ -225,7 +225,7 @@ public class Storage
             {
                 Id = 11,
                 Name="Xiaomi Mi Notebook Air 12,5", 
-                PricePerUnit = 109.99, 
+                PricePerUnit = (decimal) 109.99, 
                 Amount = 57, 
                 ManufacturerId = 4,
                 ItemCategories = _itemCategories.Where(p => p.Name == "laptop").ToList(),

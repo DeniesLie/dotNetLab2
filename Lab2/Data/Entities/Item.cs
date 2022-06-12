@@ -5,7 +5,7 @@ public class Item
 {
     public int Id { get; set; }
     public string? Name { get; set; }
-    public double PricePerUnit { get; set; }
+    public decimal PricePerUnit { get; set; }
     public uint Amount { get; set; }
     public List<DateTimeOffset> SupplyDateTimes { get; set; } = new();
 

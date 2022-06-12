@@ -50,7 +50,7 @@ public static class Rules
         }));
     }
     
-    public static Validator<double> SetMinValue(this Validator<double> validator, double minValue)
+    public static Validator<decimal> SetMinValue(this Validator<decimal> validator, decimal minValue)
     {
         return validator.AddRule(((input, result) =>
         {
@@ -63,7 +63,7 @@ public static class Rules
         
     }
     
-    public static Validator<double> SetMaxValue(this Validator<double> validator, double maxValue)
+    public static Validator<decimal> SetMaxValue(this Validator<decimal> validator, decimal maxValue)
     {
         return validator.AddRule(((input, result) =>
         {

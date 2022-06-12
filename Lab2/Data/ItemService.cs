@@ -108,14 +108,14 @@ public class ItemService
                         .ToItemCategories()).Distinct(_itemCategoryComparer));
     }
 
-    public IEnumerable<Item> FindLaptopsByPriceRange(double fromPrice, double toPrice)
+    public IEnumerable<Item> FindLaptopsByPriceRange(decimal fromPrice, decimal toPrice)
     {
         return _itemRepo.Query()
             .Where(i =>
                 i.Element("ItemCategories").Elements("ItemCategory")
                     .Select(c => c.Attribute("Name").Value).Contains("laptop")
-                && Double.Parse(i.Element("PricePerUnit").Value) >= fromPrice
-                && Double.Parse(i.Element("PricePerUnit").Value) <= toPrice)
+                && Decimal.Parse(i.Element("PricePerUnit").Value) >= fromPrice
+                && Decimal.Parse(i.Element("PricePerUnit").Value) <= toPrice)
             .Select(xItem => xItem.ToItem());
     }
 

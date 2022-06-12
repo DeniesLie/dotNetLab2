@@ -19,16 +19,22 @@ public class ConsoleReader
         var item = new Item();
         Console.WriteLine("Enter item info:");
         item.Name = ReadField<string>("Name", validator => validator.SetMinLength(2).SetMaxLength(30));
-        item.PricePerUnit = ReadField<double>("Price per unit", validator => validator.SetMinValue(0.01));
+        
+        item.PricePerUnit = ReadField<decimal>("Price per unit", validator => 
+            validator.SetMinValue((decimal) 0.01));
+        
         item.Amount = ReadField<uint>("Amount in storage");
+        
         var firstSupplyDateTime = ReadField<DateTime>("Supply date time");
         item.SupplyDateTimes.Add(firstSupplyDateTime);
+        
         Console.WriteLine("Select manufacturer:");
         var manufacturers = _itemService.GetAllManufacturers();
         manufacturers.Print();
         var manufacturerId = ReadField<int>("ManufacturerId:", v => v.SetMinValue(1));
         item.ManufacturerId = manufacturerId;
         item.Manufacturer = manufacturers.SingleOrDefault(m => m.Id == manufacturerId);
+        
         var categoriesCount = ReadField<uint>("Number of item's categories:");
         for (int i = 0; i < categoriesCount; i++)
         {
@@ -37,6 +43,7 @@ public class ConsoleReader
                 Name = categoryName
             });
         }
+        
         return item;
     }
 
